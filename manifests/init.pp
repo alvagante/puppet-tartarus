@@ -1,9 +1,9 @@
 class tartarus (
-  base_source         = 'http://wertarbyte.de/tartarus/',
-  version             = '0.9.8',
-  install_destination = '/opt',
-  user                = 'root',
-  group               = 'root',
+  $base_source         = 'http://wertarbyte.de/tartarus/',
+  $version             = '0.9.8',
+  $install_destination = '/opt',
+  $user                = 'root',
+  $group               = 'root',
   ) {
 
   puppi::netinstall { 'netinstall_tartarus':

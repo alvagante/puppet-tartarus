@@ -1,12 +1,12 @@
 define tartarus::job (
-  directory,
-  storage_method       = 'ftp',
-  storage_ftp_server   = '',
-  storage_ftp_user     = '',
-  storage_ftp_password = '',
-  compression_method   = 'bzip2',
-  schedule             = '',
-  template_file        = 'tartarus/job.conf'
+  $directory,
+  $storage_method       = 'ftp',
+  $storage_ftp_server   = '',
+  $storage_ftp_user     = '',
+  $storage_ftp_password = '',
+  $compression_method   = 'bzip2',
+  $schedule             = '',
+  $template_file        = 'tartarus/job.conf'
   ) {
 
   include tartarus
