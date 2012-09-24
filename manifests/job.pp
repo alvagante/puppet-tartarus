@@ -6,13 +6,14 @@ define tartarus::job (
   $storage_ftp_password = '',
   $compression_method   = 'bzip2',
   $schedule             = '',
-  $template_file        = 'tartarus/job.conf'
+  $template_file        = 'tartarus/job.conf',
+  $ensure               = 'present',
   ) {
 
   include tartarus
 
   file { "/etc/tartarus/${name}.conf":
-    ensure  => present,
+    ensure  => $ensure,
     mode    => '0640',
     owner   => $tartarus::user,
     group   => $tartarus::group,
