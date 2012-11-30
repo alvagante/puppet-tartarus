@@ -7,7 +7,8 @@ define tartarus::job (
   $compression_method   = 'bzip2',
   $schedule             = '',
   $template_file        = 'tartarus/job.conf',
-  $ensure               = 'present',
+  $charon_maxage        = '',
+  $ensure               = 'present'
   ) {
 
   include tartarus
